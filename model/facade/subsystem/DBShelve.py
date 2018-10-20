@@ -49,3 +49,19 @@ class DBShelve(IDataBase):
                     res = True
                     break
         return res
+
+    def get_all_items(self):
+        all_data = []
+        db = shelve.open('shelveDB')
+        for k, v in db.items():
+            all_data.append([k, v])
+        all_data.sort(key=lambda x: x[0])
+        return all_data
+
+    def delete_item(self, id):
+        try:
+            db = shelve.open('shelveDB')
+            db.pop(str(id))
+            return True
+        except:
+            return False

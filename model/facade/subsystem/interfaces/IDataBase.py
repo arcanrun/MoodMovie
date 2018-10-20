@@ -25,3 +25,10 @@ class IDataBase(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def has_mark(self, sign):
         pass
+
+    @abc.abstractmethod
+    def get_all_items(self):
+        pass
+    @abc.abstractmethod
+    def delete_item(self, id):
+        pass

@@ -37,3 +37,11 @@ class IFacadeMoodMovie(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def has_mark(self, movie_id_api):
         pass
+
+    @abc.abstractmethod
+    def get_all_movies_from_bookmarks(self):
+        pass
+
+    @abc.abstractmethod
+    def delete_bookmark(self, id):
+        pass

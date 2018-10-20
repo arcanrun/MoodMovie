@@ -3,11 +3,15 @@ import abc
 
 class IMoodMovieModel(metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def subscribe(self):
+    def subscribe(self, observer):
         pass
 
     @abc.abstractmethod
-    def unsubscribe(self):
+    def unsubscribe(self, movie):
+        pass
+
+    @abc.abstractmethod
+    def notify_subscribers(self, msg):
         pass
 
     @abc.abstractmethod
@@ -40,5 +44,13 @@ class IMoodMovieModel(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
     def has_marks(self, movie_id_api):
+        pass
+
+    @abc.abstractmethod
+    def get_all_movies_from_bookmarks(self):
+        pass
+
+    @abc.abstractmethod
+    def delete_bookmark(self, id):
         pass
 

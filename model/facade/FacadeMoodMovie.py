@@ -36,3 +36,9 @@ class FacadeMoodMovie(IFacadeMoodMovie):
 
     def has_mark(self, movie_id_api):
         return self.db.has_mark(movie_id_api)
+
+    def get_all_movies_from_bookmarks(self):
+        return self.db.get_all_items()
+
+    def delete_bookmark(self, id):
+        return self.db.delete_item(id)
