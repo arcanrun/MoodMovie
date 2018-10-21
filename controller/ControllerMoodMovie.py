@@ -16,3 +16,6 @@ class ControllerMoodMovie(IControllerMoodMovie):
 
     def delete_bookmark(self, id):
         self.model.delete_bookmark(id)
+
+    def add_mark_db(self, id, mark):
+        self.model.add_mark_db(id, mark)

@@ -27,9 +27,13 @@ class DBShelve(IDataBase):
         db.close()
 
     def change_item(self, item, id):
-        db = shelve.open('shelveDB')
-        db[str(id)] = item
-        db.close()
+        try:
+            db = shelve.open('shelveDB')
+            db[str(id)] = item
+            db.close()
+            return True
+        except Exception:
+            return False
 
     def has_item(self, sign):
         res = False

@@ -17,3 +17,7 @@ class IControllerMoodMovie(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def delete_bookmark(self, id):
         pass
+
+    @abc.abstractmethod
+    def add_mark_db(self, id, mark):
+        pass

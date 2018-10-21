@@ -87,8 +87,8 @@ class CLIView(IObserver):
         dict = {
             '1': self.get_all_movies_from_bookmarks,
             '2': self.delete_bookmark,
-            '4': self.clear_all_bookmarks,
-            # '3': self.add_mark_db
+            '3': self.add_mark_db,
+            '4': self.clear_all_bookmarks
         }
 
         try:
@@ -194,4 +194,14 @@ class CLIView(IObserver):
         id = input()
         self.controller.delete_bookmark(id)
 
+    def add_mark_db(self):
+        self.get_all_movies_from_bookmarks()
+        print("ENTER THE ID OF THE MOVIE:")
+        id = input()
+        print('ENTER THE MARK FOR MOVIE: {}'.format(id))
+        mark = int(input())
+        if mark > 10:
+            mark = 10
+
+        self.controller.add_mark_db(id, mark)
 

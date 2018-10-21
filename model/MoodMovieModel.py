@@ -44,7 +44,6 @@ class MoodMovieModel(IMoodMovieModel):
             msg = self.create_msg('ERROR WHILE CLEAR DB', 'FAIL')
             self.notify_subscribers(msg)
 
-
     def add_mark_scratch(self, movie, mark):
         try:
             self.facade.add_mark_scratch(movie, mark)
@@ -53,8 +52,19 @@ class MoodMovieModel(IMoodMovieModel):
         except:
             msg = self.create_msg('ERROR WHILE ADDING MARKS',self.facade.add_mark_scratch(movie, mark),'')
             self.notify_subscribers(msg)
+
     def add_mark_db(self, id, mark):
-        self.facade.add_mark_db(id, mark)
+        try:
+            response = self.facade.add_mark_db(id, mark)
+            if response:
+                msg = self.create_msg('', '', 'THE MARK {} TO MOVIE WITH ID: {} HAS BEEN ADDED'.format(mark, id))
+                self.notify_subscribers(msg)
+            else:
+                msg = self.create_msg('ERROR WHILE ADDING MARK', '1', '')
+                self.notify_subscribers(msg)
+        except Exception:
+            msg = self.create_msg('ERROR WHILE ADDING MARK','2', '')
+            self.notify_subscribers(msg)
 
     def has_bookmark(self, movie_id_api):
         return self.facade.has_bookmark(movie_id_api)
