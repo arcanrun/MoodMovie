@@ -6,9 +6,10 @@ class CLIView(IObserver):
     def __init__(self, model, controller):
         self.model = model
         self.controller = controller
+        self.model.subscribe(self)
 
-    def update(self):
-        pass
+    def update(self, msg):
+        print('{} {} {}'.format(msg['header'], msg['status'], msg['repr']))
 
     def main_menu(self):
         print(
@@ -45,8 +46,8 @@ class CLIView(IObserver):
 11. Back to main menu
 	
 """
-        )
-        n = input()
+)
+        choose_1 = input()
         dict = {
             '1': [35],  # comedy
             '2': [18, 10752],  # drama, war
@@ -58,25 +59,47 @@ class CLIView(IObserver):
             '8': [28, 12],  # Action, Adventure
             '9': [37],  # Western"
             '10':[10752]  # War
-
-
         }
 
+
         try:
-            chosen_movie = dict[n]
-            movie = self.model.get_movie_from_api(chosen_movie)
+            chosen_movie = dict[choose_1]
+            movie = self.get_movie_api(chosen_movie)
             self.template_view_movie(movie)
-            self.mood_movie_menu()
+            self.template_view_movie_control_btns(chosen_movie, movie)
+
+
         except KeyError:
             self.main_menu()
 
     def duty_menu(self):
-        self.main_menu()
+        print(
+"""
+1. Show my bookmarks 
+2. Remove bookmark
+3. Change marks
+4. Delete all bookmarks
+5. Back
+"""
+        )
+        choose_1 = input()
+        dict = {
+            '1': self.get_all_movies_from_bookmarks,
+            '4': self.clear_all_bookmarks,
+            # '3': self.add_mark_db
+        }
+
+        try:
+            dict[choose_1]()
+        except KeyError:
+            self.main_menu()
 
     def exit_app(self):
         sys.exit('See Ya!')
 
     def template_view_movie(self, movie):
+
+
         border = '.'
         upper_border = border * 40
         footer_border = len(upper_border) * border
@@ -92,3 +115,54 @@ class CLIView(IObserver):
         print('==URL==')
         print(movie['url_movie'])
         print(footer_border)
+
+    def template_view_movie_control_btns(self, id_cataegories, movie):
+        action = {
+            '1': self.template_view_movie,
+            '2': self.add_to_bookmarks,
+            '3': self.add_mark_scratch
+        }
+
+        print('1.More | 2.Book | 3.Add mark | 4. Back')
+        print('\n')
+        choose_2 = input()
+        try:
+            if choose_2 == '1':
+                inner_movie = self.get_movie_api(id_cataegories)
+                action[choose_2](inner_movie)
+                self.template_view_movie_control_btns(id_cataegories, inner_movie)
+            else:
+                action[choose_2](movie)
+        except KeyError:
+            self.mood_movie_menu()
+
+    def add_to_bookmarks(self, movie):
+        self.controller.add_to_bookmarks(movie)
+
+    def add_mark_scratch(self, movie):
+        print('ENTER THE MARK FOR MOVIE: {}'.format(movie['title']))
+        mark = input()
+        self.controller.add_mark_scratch(movie, mark)
+
+    def get_movie_api(self, movie_category):
+        return self.model.get_movie_from_api(movie_category)
+
+    def get_all_movies_from_bookmarks(self):
+        all_movies = self.model.get_all_movies_from_bookmarks()
+        if len(all_movies) == 0:
+            print('YOU BOOKMARKED NOTHING YET')
+        else:
+            for movie in all_movies:
+                print()
+
+                print('==ID: {}=='.format(movie[0]))
+                self.template_view_movie(movie[1])
+
+    def clear_all_bookmarks(self):
+        print("DO YOU REALLY WANT TO DELETE ALL BOOKMARKS? [y/n]")
+        n = input()
+        if not n.lower() == 'y':
+            self.main_menu()
+        else:
+            self.controller.clear_all_bookmarks()
+

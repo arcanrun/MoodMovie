@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ac02ba4-c385-41d0-8461-b5fbb1e50068" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/ControllerMoodMovie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/interfaces/IControllerMoodMovie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/interfaces/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_ControllerMoodMovie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/MoodMovieModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/MoodMovieModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelveDB" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/CLIView.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/CLIView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/interfaces/IObserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/interfaces/IObserver.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,22 +30,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="27" />
+          <entry key="py" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="27" />
+          <entry key="Python" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="8176" />
+          <entry key="py" value="10605" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="8176" />
+          <entry key="Python" value="10605" />
         </counts>
       </usages-collector>
     </session>
@@ -47,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_ModelMoodMovie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="263" column="36" lean-forward="true" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
+            <state relative-caret-position="175">
+              <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="40" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1540065981689" expanded="true" signature="309:314" ph="..." />
@@ -60,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/facade/FacadeMoodMovie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="150">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding>
                 <marker date="1540066128810" expanded="true" signature="458:464" ph="..." />
               </folding>
@@ -70,66 +78,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/facade/subsystem/interfaces/IMovieSelector.py">
+        <entry file="file://$PROJECT_DIR$/model/interfaces/IMoodMovieModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="153">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <marker date="1539973755935" expanded="true" signature="57:62" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/MoodMovieModel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="26" />
-              <folding>
-                <marker date="1540067028866" expanded="true" signature="96:101" ph="..." />
+                <marker date="1540120454717" expanded="true" signature="279:285" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/MoodMovieModel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+              <folding>
+                <marker date="1540123161219" expanded="true" signature="96:101" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/CLIView.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+            <state relative-caret-position="666">
+              <caret line="157" column="33" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1540114740622" expanded="true" signature="86:91" ph="..." />
-                <marker date="1540114740622" expanded="true" signature="1642:1698" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#75#0" expanded="true" />
-                <marker date="1540113641473" expanded="true" signature="198:274" ph="..." />
-                <marker date="1540113641473" expanded="true" signature="1100:1102" ph="..." />
-                <marker date="1540113641473" expanded="true" signature="1100:1106" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-                <marker date="1540069568765" expanded="true" signature="391:427" ph="..." />
+                <marker date="1540122847003" expanded="true" signature="86:91" ph="..." />
+                <marker date="1540122847003" expanded="true" signature="1776:2212" ph="..." />
+                <marker date="1540122847003" expanded="true" signature="3054:3520" ph="..." />
               </folding>
             </state>
           </provider>
@@ -138,22 +119,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/interfaces/IObserver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="90">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="24" />
               <folding>
-                <marker date="1540067315762" expanded="true" signature="52:57" ph="..." />
+                <marker date="1540121059168" expanded="true" signature="52:57" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/interfaces/IMoodMovieModel.py">
+        <entry file="file://$PROJECT_DIR$/test/test_ControllerMoodMovie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="397">
+              <caret line="62" column="42" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="42" />
               <folding>
-                <marker date="1540067028794" expanded="true" signature="279:285" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/interfaces/IControllerMoodMovie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+              <folding>
+                <marker date="1540121507927" expanded="true" signature="63:68" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/ControllerMoodMovie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="27" />
+              <folding>
+                <marker date="1540121507563" expanded="true" signature="184:190" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1540120921194" expanded="true" signature="454:490" ph="..." />
               </folding>
             </state>
           </provider>
@@ -172,6 +190,7 @@
     <findStrings>
       <find>has_</find>
       <find>has</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,12 +209,15 @@
         <option value="$PROJECT_DIR$/model/facade/subsystem/DBShelve.py" />
         <option value="$PROJECT_DIR$/test/test_ModelMoodMovie.py" />
         <option value="$PROJECT_DIR$/model/facade/FacadeMoodMovie.py" />
-        <option value="$PROJECT_DIR$/model/interfaces/IMoodMovieModel.py" />
-        <option value="$PROJECT_DIR$/model/MoodMovieModel.py" />
-        <option value="$PROJECT_DIR$/view/interfaces/IObserver.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py" />
+        <option value="$PROJECT_DIR$/model/interfaces/IMoodMovieModel.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/view/interfaces/IObserver.py" />
+        <option value="$PROJECT_DIR$/test/test_ControllerMoodMovie.py" />
+        <option value="$PROJECT_DIR$/controller/interfaces/IControllerMoodMovie.py" />
+        <option value="$PROJECT_DIR$/controller/ControllerMoodMovie.py" />
         <option value="$PROJECT_DIR$/view/CLIView.py" />
+        <option value="$PROJECT_DIR$/model/MoodMovieModel.py" />
       </list>
     </option>
   </component>
@@ -222,7 +244,29 @@
             <path>
               <item name="MoodMovie" type="b2602c69:ProjectViewProjectNode" />
               <item name="MoodMovie" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MoodMovie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MoodMovie" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MoodMovie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MoodMovie" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MoodMovie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MoodMovie" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MoodMovie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MoodMovie" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MoodMovie" type="b2602c69:ProjectViewProjectNode" />
@@ -372,15 +416,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="27" width="1316" height="741" extended-state="6" />
-    <editor active="true" />
+    <frame x="50" y="27" width="1316" height="741" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.18793504" />
-      <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.18793504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973404" visible="true" weight="0.19257541" />
+      <window_info id="Structure" order="1" sideWeight="0.50265956" side_tool="true" weight="0.19257541" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29966888" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.7566225" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -393,25 +436,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49878347" visible="true" weight="0.20494974" />
-      <window_info id="Structure" order="1" sideWeight="0.50121653" side_tool="true" weight="0.19102861" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20462047" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.43564355" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -462,64 +486,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_ModelMoodMovie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="263" column="36" lean-forward="true" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1540065981689" expanded="true" signature="309:314" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/interfaces/IMoodMovieModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <marker date="1540067028794" expanded="true" signature="279:285" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/interfaces/IObserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <marker date="1540067315762" expanded="true" signature="52:57" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/facade/subsystem/interfaces/IMovieSelector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <marker date="1539973755935" expanded="true" signature="57:62" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MoodMovieModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <marker date="1540067028866" expanded="true" signature="96:101" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1540069568765" expanded="true" signature="391:427" ph="..." />
           </folding>
         </state>
       </provider>
@@ -546,22 +518,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/facade/FacadeMoodMovie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="37" />
+        <state relative-caret-position="150">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding>
             <marker date="1540066128810" expanded="true" signature="458:464" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_ModelMoodMovie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1540065981689" expanded="true" signature="309:314" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/interfaces/IMoodMovieModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1540120454717" expanded="true" signature="279:285" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1540120921194" expanded="true" signature="454:490" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/interfaces/IObserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <marker date="1540121059168" expanded="true" signature="52:57" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/interfaces/IControllerMoodMovie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <marker date="1540121507927" expanded="true" signature="63:68" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/ControllerMoodMovie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <marker date="1540121507563" expanded="true" signature="184:190" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/CLIView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+        <state relative-caret-position="666">
+          <caret line="157" column="33" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1540114740622" expanded="true" signature="86:91" ph="..." />
-            <marker date="1540114740622" expanded="true" signature="1642:1698" ph="..." />
+            <marker date="1540122847003" expanded="true" signature="86:91" ph="..." />
+            <marker date="1540122847003" expanded="true" signature="1776:2212" ph="..." />
+            <marker date="1540122847003" expanded="true" signature="3054:3520" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_ControllerMoodMovie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="62" column="42" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MoodMovieModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding>
+            <marker date="1540123161219" expanded="true" signature="96:101" ph="..." />
           </folding>
         </state>
       </provider>

@@ -23,10 +23,27 @@ class MoodMovieModel(IMoodMovieModel):
         return self.facade.get_movie_from_bd(id)
 
     def add_to_bookmarks(self, movie):
-        self.facade.add_to_db(movie)
+        try:
+            self.facade.add_to_db(movie)
+            msg = self.create_msg('COUNT ALL BOOKMARKS: {} \n'.format(len(self.get_all_movies_from_bookmarks())), '', 'THE MOVIE BY TITLE {} HAS BEEN ADDED TO BOOKMARKS'.format(movie['title']))
+            self.notify_subscribers(msg)
+        except:
+            msg = self.create_msg(movie['title'], 'FAIL')
+            self.notify_subscribers(msg)
 
     def clear_all_bookmarks(self):
-        self.facade.clear_db()
+        try:
+            self.facade.clear_db()
+            count_bookmarks = len(self.get_all_movies_from_bookmarks())
+            if count_bookmarks == 0:
+                msg = self.create_msg('','','ALL BOOKMARKS WAS DELETED')
+                self.notify_subscribers(msg)
+            else:
+                return SyntaxError
+        except:
+            msg = self.create_msg('ERROR WHILE CLEAR DB', 'FAIL')
+            self.notify_subscribers(msg)
+
 
     def add_mark_scratch(self, movie, mark):
         self.facade.add_mark_scratch(movie, mark)
@@ -46,3 +63,10 @@ class MoodMovieModel(IMoodMovieModel):
     def delete_bookmark(self, id):
         msg = self.facade.delete_bookmark(id)
         self.notify_subscribers(msg)
+
+    def create_msg(self, header, status, repr = None):
+        return {
+            'header': header,
+            'status': status,
+            'repr': repr
+        }

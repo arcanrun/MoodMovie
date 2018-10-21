@@ -3,6 +3,7 @@ from model.MoodMovieModel import MoodMovieModel
 from model.facade.FacadeMoodMovie import FacadeMoodMovie
 from model.facade.subsystem.DBShelve import DBShelve
 from model.facade.subsystem.MovieSelectorTheMovieDborg import MovieSelectorTheMovieDborg
+from controller.ControllerMoodMovie import ControllerMoodMovie
 
 
 """
@@ -16,7 +17,8 @@ if __name__ == '__main__':
     movie_selector = MovieSelectorTheMovieDborg()
     facade = FacadeMoodMovie(movie_selector, db)
     model = MoodMovieModel(facade)
-    controller = None
+    controller = ControllerMoodMovie(model)
     view = CLIView(model, controller)
+
 
     app(view)
