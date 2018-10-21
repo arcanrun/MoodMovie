@@ -1,5 +1,5 @@
 import sys
-from .interfaces.IObserver import IObserver
+from view.interfaces.IObserver import IObserver
 
 
 class CLIView(IObserver):
@@ -61,10 +61,22 @@ class CLIView(IObserver):
 
 
         }
-        choosed_movie = dict.get(n, self.main_menu)
 
-        movie = self.model.get_movie_from_api(choosed_movie)
+        try:
+            chosen_movie = dict[n]
+            movie = self.model.get_movie_from_api(chosen_movie)
+            self.template_view_movie(movie)
+            self.mood_movie_menu()
+        except KeyError:
+            self.main_menu()
 
+    def duty_menu(self):
+        self.main_menu()
+
+    def exit_app(self):
+        sys.exit('See Ya!')
+
+    def template_view_movie(self, movie):
         border = '.'
         upper_border = border * 40
         footer_border = len(upper_border) * border
@@ -72,7 +84,7 @@ class CLIView(IObserver):
         print('==TITLE==')
         print(movie['title'])
         print('==overview'.upper() + '==')
-        text =  movie['overview']
+        text = movie['overview']
         for i in range(0, len(text), len(upper_border)):
             if i % len(upper_border) == 0:
                 text = text[:i] + '\n' + text[i:]
@@ -80,10 +92,3 @@ class CLIView(IObserver):
         print('==URL==')
         print(movie['url_movie'])
         print(footer_border)
-        self.mood_movie_menu()
-
-    def duty_menu(self):
-        self.main_menu()
-
-    def exit_app(self):
-        sys.exit('See Ya!')

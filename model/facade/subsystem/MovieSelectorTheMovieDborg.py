@@ -13,11 +13,10 @@ class MovieSelectorTheMovieDborg(IMovieSelector):
         diapason = 1001 # thedbmovie api provides to parse only 1000 pages
         random_page = random.randint(0, diapason)
 
-        # total_pages = data['total_pages']
         try:
             data = self.request_genre_random(ids_genres, page=str(random_page))
         except Exception:
-            raise RuntimeError
+            raise SyntaxError
 
         data = data['results']
 
@@ -31,24 +30,34 @@ class MovieSelectorTheMovieDborg(IMovieSelector):
 
         return movie
 
-
     def request_genre_random(self, ids_genres, page='1', method='GET', api_key = 'a6bd92f5e397e4a9362de86cdcc170fe', include_adult = 'false'):
-        try:
-            id_category = str( ids_genres[random.randint(0, len(ids_genres) -1)] ) # random id from ids_movie
-        except Exception:
-            raise RuntimeError
+
+        id_category = str(ids_genres[random.randint(0, len(ids_genres) - 1)]) # random id from ids_movie
+
 
         url = '/3/discover/movie?with_genres=' + id_category + '&page=' + page + '&include_video=false&include_adult=' + include_adult + '&sort_by=popularity.desc&language=en-US&api_key=' + api_key
         self.conn.request(method, url)
         res = self.conn.getresponse()
         data = res.read()
         data_encoded = json.loads(data)
+        real_diaposon = int(data_encoded['total_pages'])
+
+        if int(page) > real_diaposon:
+            page = str(random.randint(0, real_diaposon))
+            return self.request_genre_random(ids_genres, page)
 
         return data_encoded
+
+
+
 
     def create_url_movive(self, id):
         url = 'https://www.themoviedb.org/movie/' + str(id)
         return url
+
+    def set_diaposon(self):
+        pass
+
 
 
 if __name__ == '__main__':

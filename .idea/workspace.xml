@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ac02ba4-c385-41d0-8461-b5fbb1e50068" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/CLIView.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/CLIView.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,22 +22,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="25" />
+          <entry key="py" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="25" />
+          <entry key="Python" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="7656" />
+          <entry key="py" value="8176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="7656" />
+          <entry key="Python" value="8176" />
         </counts>
       </usages-collector>
     </session>
@@ -97,12 +96,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/CLIView.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state relative-caret-position="189">
+              <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1540071469317" expanded="true" signature="82:87" ph="..." />
-                <marker date="1540071469317" expanded="true" signature="2041:2120" ph="..." />
+                <marker date="1540114740622" expanded="true" signature="86:91" ph="..." />
+                <marker date="1540114740622" expanded="true" signature="1642:1698" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,11 +110,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-end-line="27" />
+            <state relative-caret-position="732">
+              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
-                <marker date="1539976024821" expanded="true" signature="198:274" ph="..." />
+                <marker date="1540113641473" expanded="true" signature="198:274" ph="..." />
+                <marker date="1540113641473" expanded="true" signature="1100:1102" ph="..." />
+                <marker date="1540113641473" expanded="true" signature="1100:1106" ph="..." />
               </folding>
             </state>
           </provider>
@@ -158,19 +159,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/facade/subsystem/DBShelve.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1540065763621" expanded="true" signature="86:91" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -197,7 +185,6 @@
         <option value="$PROJECT_DIR$/model/facade/interfaces/IFacadeMoodMoovie.py" />
         <option value="$PROJECT_DIR$/model/facade/subsystem/MovieSelector.py" />
         <option value="$PROJECT_DIR$/model/facade/subsystem/interfaces/IMovieSelector.py" />
-        <option value="$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py" />
         <option value="$PROJECT_DIR$/model/facade/interfaces/IFacadeMoodMovie.py" />
         <option value="$PROJECT_DIR$/model/facade/subsystem/interfaces/IDataBase.py" />
         <option value="$PROJECT_DIR$/model/facade/subsystem/DBShelve.py" />
@@ -207,6 +194,7 @@
         <option value="$PROJECT_DIR$/model/MoodMovieModel.py" />
         <option value="$PROJECT_DIR$/view/interfaces/IObserver.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py" />
         <option value="$PROJECT_DIR$/view/CLIView.py" />
       </list>
     </option>
@@ -271,6 +259,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="CLIView" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MoodMovie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/view" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/view/CLIView.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="DBShelve" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MoodMovie" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -338,10 +347,12 @@
       <item itemvalue="Python.MovieSelector" />
       <item itemvalue="Python.DBShelve" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.CLIView" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.CLIView" />
         <item itemvalue="Python.DBShelve" />
         <item itemvalue="Python.MovieSelector" />
       </list>
@@ -361,14 +372,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="27" width="1316" height="741" extended-state="7" />
+    <frame x="50" y="27" width="1316" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49878347" visible="true" weight="0.23588553" />
-      <window_info id="Structure" order="1" sideWeight="0.50121653" side_tool="true" weight="0.19102861" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.18793504" />
+      <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.18793504" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18046358" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29966888" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -491,16 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/facade/FacadeMoodMovie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="37" />
-          <folding>
-            <marker date="1540066128810" expanded="true" signature="458:464" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/MoodMovieModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -522,25 +524,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib/python3.6/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="202" column="25" lean-forward="true" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/facade/subsystem/MovieSelectorTheMovieDborg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-end-line="27" />
+        <state relative-caret-position="732">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
-            <marker date="1539976024821" expanded="true" signature="198:274" ph="..." />
+            <marker date="1540113641473" expanded="true" signature="198:274" ph="..." />
+            <marker date="1540113641473" expanded="true" signature="1100:1102" ph="..." />
+            <marker date="1540113641473" expanded="true" signature="1100:1106" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/facade/FacadeMoodMovie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="37" />
+          <folding>
+            <marker date="1540066128810" expanded="true" signature="458:464" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/CLIView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+        <state relative-caret-position="189">
+          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1540071469317" expanded="true" signature="82:87" ph="..." />
-            <marker date="1540071469317" expanded="true" signature="2041:2120" ph="..." />
+            <marker date="1540114740622" expanded="true" signature="86:91" ph="..." />
+            <marker date="1540114740622" expanded="true" signature="1642:1698" ph="..." />
           </folding>
         </state>
       </provider>
