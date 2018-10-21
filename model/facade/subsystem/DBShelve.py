@@ -46,7 +46,7 @@ class DBShelve(IDataBase):
         for k, v in db.items():
             if str(v['id']) == str(sign):
                 if 'your_mark' in v:
-                    res = True
+                    res = v['your_mark']
                     break
         return res
 

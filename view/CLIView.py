@@ -69,6 +69,7 @@ class CLIView(IObserver):
             self.template_view_movie_control_btns(chosen_movie, movie)
 
 
+
         except KeyError:
             self.main_menu()
 
@@ -85,6 +86,7 @@ class CLIView(IObserver):
         choose_1 = input()
         dict = {
             '1': self.get_all_movies_from_bookmarks,
+            '2': self.delete_bookmark,
             '4': self.clear_all_bookmarks,
             # '3': self.add_mark_db
         }
@@ -99,12 +101,13 @@ class CLIView(IObserver):
 
     def template_view_movie(self, movie):
 
+        booked = self.template_view_movie_booked_label(movie)
 
         border = '.'
         upper_border = border * 40
         footer_border = len(upper_border) * border
         print(upper_border)
-        print('==TITLE==')
+        print('==TITLE=={}'.format(booked))
         print(movie['title'])
         print('==overview'.upper() + '==')
         text = movie['overview']
@@ -114,6 +117,7 @@ class CLIView(IObserver):
         print(text)
         print('==URL==')
         print(movie['url_movie'])
+        print(self.template_view_movie_marks(movie) * u"\u2605")
         print(footer_border)
 
     def template_view_movie_control_btns(self, id_cataegories, movie):
@@ -136,13 +140,31 @@ class CLIView(IObserver):
         except KeyError:
             self.mood_movie_menu()
 
+    def template_view_movie_booked_label(self, movie):
+        movie_id_api = movie['id']
+        has_bookmark = self.model.has_bookmark(movie_id_api)
+        if has_bookmark:
+            return u"\U0001F516"
+        else:
+            return ''
+
+    def template_view_movie_marks(self, movie):
+        movie_id_api = movie['id']
+        marks = self.model.has_marks(movie_id_api)
+        return marks
+
     def add_to_bookmarks(self, movie):
         self.controller.add_to_bookmarks(movie)
 
     def add_mark_scratch(self, movie):
         print('ENTER THE MARK FOR MOVIE: {}'.format(movie['title']))
-        mark = input()
+        mark = int(input())
+        if mark > 10:
+            mark = 10
         self.controller.add_mark_scratch(movie, mark)
+
+    def add_mark_db(self, id, mark):
+        pass
 
     def get_movie_api(self, movie_category):
         return self.model.get_movie_from_api(movie_category)
@@ -165,4 +187,11 @@ class CLIView(IObserver):
             self.main_menu()
         else:
             self.controller.clear_all_bookmarks()
+
+    def delete_bookmark(self):
+        self.get_all_movies_from_bookmarks()
+        print("ENTER THE ID OF THE MOVIE:")
+        id = input()
+        self.controller.delete_bookmark(id)
+
 

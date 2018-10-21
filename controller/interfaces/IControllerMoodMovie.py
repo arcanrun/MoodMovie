@@ -13,3 +13,7 @@ class IControllerMoodMovie(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def clear_all_bookmarks(self):
         pass
+
+    @abc.abstractmethod
+    def delete_bookmark(self, id):
+        pass

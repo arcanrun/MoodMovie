@@ -46,8 +46,13 @@ class MoodMovieModel(IMoodMovieModel):
 
 
     def add_mark_scratch(self, movie, mark):
-        self.facade.add_mark_scratch(movie, mark)
-
+        try:
+            self.facade.add_mark_scratch(movie, mark)
+            msg = self.create_msg('','', 'THE MOVIE BY ID: {} HAS BEEN ADD TO BOOKMARKS WITH MARK: {}'.format(len(self.get_all_movies_from_bookmarks()) -1 , mark))
+            self.notify_subscribers(msg)
+        except:
+            msg = self.create_msg('ERROR WHILE ADDING MARKS',self.facade.add_mark_scratch(movie, mark),'')
+            self.notify_subscribers(msg)
     def add_mark_db(self, id, mark):
         self.facade.add_mark_db(id, mark)
 
@@ -62,6 +67,10 @@ class MoodMovieModel(IMoodMovieModel):
 
     def delete_bookmark(self, id):
         msg = self.facade.delete_bookmark(id)
+        if msg:
+            msg = self.create_msg('','','THE MOVIE WITH ID: {} WAS DELETED'.format(id))
+        else:
+            msg = self.create_msg('DELETEING STATUS', 'ERROR', '')
         self.notify_subscribers(msg)
 
     def create_msg(self, header, status, repr = None):

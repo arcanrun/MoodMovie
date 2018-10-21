@@ -189,7 +189,7 @@ class ModelMoodMovieTest(unittest.TestCase):
 
         res3 = self.model.has_marks(movie_id_api)
 
-        self.assertEqual(res3, True)
+        self.assertEqual(res3, 3)
 
         self.model.clear_all_bookmarks()
 

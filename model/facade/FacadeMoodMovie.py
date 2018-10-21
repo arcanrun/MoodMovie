@@ -24,6 +24,7 @@ class FacadeMoodMovie(IFacadeMoodMovie):
     def add_mark_scratch(self, movie, mark):
         movie['your_mark'] = int(mark)
         self.add_to_db(movie)
+        return movie['your_mark']
 
     def add_mark_db(self, id, mark):
         movie = self.get_movie_from_bd(id)

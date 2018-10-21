@@ -6,10 +6,13 @@ class ControllerMoodMovie(IControllerMoodMovie):
         self.model = model
 
     def add_mark_scratch(self, movie, mark):
-        pass
+        self.model.add_mark_scratch(movie, mark)
 
     def add_to_bookmarks(self, movie):
         self.model.add_to_bookmarks(movie)
 
     def clear_all_bookmarks(self):
         self.model.clear_all_bookmarks()
+
+    def delete_bookmark(self, id):
+        self.model.delete_bookmark(id)
