@@ -13,7 +13,7 @@ class FacadeMoodMovie(IFacadeMoodMovie):
         self.db.add_item(movie)
 
     def change_movie(self, movie, id):
-        self.db.change_item(movie, id)
+        return self.db.change_item(movie, id)
 
     def get_movie_from_bd(self, id):
         return self.db.get_item(id)
@@ -30,7 +30,7 @@ class FacadeMoodMovie(IFacadeMoodMovie):
         movie = self.get_movie_from_bd(id)
         movie['your_mark'] = int(mark)
 
-        self.change_movie(movie, id)
+        return self.change_movie(movie, id)
 
     def has_bookmark(self, movie_id_api):
         return self.db.has_item(movie_id_api)

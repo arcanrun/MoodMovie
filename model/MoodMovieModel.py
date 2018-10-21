@@ -56,6 +56,7 @@ class MoodMovieModel(IMoodMovieModel):
     def add_mark_db(self, id, mark):
         try:
             response = self.facade.add_mark_db(id, mark)
+            print(response)
             if response:
                 msg = self.create_msg('', '', 'THE MARK {} TO MOVIE WITH ID: {} HAS BEEN ADDED'.format(mark, id))
                 self.notify_subscribers(msg)

@@ -32,7 +32,7 @@ class DBShelve(IDataBase):
             db[str(id)] = item
             db.close()
             return True
-        except Exception:
+        except:
             return False
 
     def has_item(self, sign):
